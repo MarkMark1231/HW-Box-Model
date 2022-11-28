@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1440px;
+            margin: auto;
+        }
+
+        main {
+            width: 1200px;
+            margin: auto;
+        }
+
+        li, a, button {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;    
+            padding: 26px 0px 26px 0;    
+            width: 1200px;
+            margin: auto;
+        }
+
+
+        .logo {
+            cursor: pointer;
+        }
+
+        .nav_link {
+            list-style: none;
+        }
+
+        .nav_link li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .nav_link li a {
+            transition: all 0.3s ease 0s;
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav_link li a:hover {
+            color: #FF9900;
+        }
+
+
+        .Sign_In {
+            width: 110px;
+            height: 46px;
+            border: 1px solid #BCD0E5;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            margin-right: 32px;
+        }
+
+        .Sign_Up {
+            width: 110px;
+            height: 46px;
+            background: #FF9900;
+            border-radius: 4px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .firstsect {
+            display: flex;
+            width: 1200px;
+            margin-top: 99px;
+        }
+
+        .firstsect h1 {
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            padding-top: 97px;
+        }
+
+        .firstsect p {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .get_buttn {
+            width: 180px;
+            height: 50px;
+            background: #FF9900;
+            border-radius: 4px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .secndsect {
+            width: 1440px;
+            height: 510px;
+        }
+
+        .cards_container {
+            width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .titlediv {
+            width: 1200px;
+        }
+
+        .secndsect h2 {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 99px;
+            margin-bottom: 50px;
+        }
+
+        .firsicondiv {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: #7752BE;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .secicondiv {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: #FAB005;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thiricondiv {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: #F03E3D;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quartericondiv {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: #4DADF7;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cards_container h4 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            margin-top: 30px;
+        }
+
+        .cards_container p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 16px;
+        }
+
+        .centrbtn {
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin-top: 50px;
+        }
+
+        .bcgdiv {
+            width: 1200px;
+           background-image: url("https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/bg.png"); 
+           background-size: 50%;
+           background-size: cover;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 2fr;
+            grid-gap: 50px;
+            width: 1200px;
+            margin-bottom: 70px;
+            margin-top: 100px;
+            margin: auto;
+        }
+
+        .footcontainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footcontainer h4 {
+            font-family: 'Gotham';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footcontainer a {
+            text-decoration: none;
+            color: #544837;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
+        
+        #phone {
+            width: 340px;
+            height: 50px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;      
+            margin-bottom: 25px;  
+        }    
+
+    </style>
+</head>
+<body>
+    <Header>
+                <a href="#"><img class="logo" src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/Logo.png" alt="" width="200px" height="32px"></a>
+            <nav>
+                <ul class="nav_link">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="#"><button class="Sign_In" type="button">Sign In</button></a>
+                <a href="#"><button class="Sign_Up" type="button">Sign Up</button></a>
+            </div>
+    </Header>
+    <main>
+        <section class="firstsect">
+            <div class="first_left">
+                <h1>The Design Thinking superpowers</h1>
+                <p>Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+                <a href="#"><button class="get_buttn">Get started</button></a>
+            </div>
+            <div class="first_right">
+                <img src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/Image.png" alt="" width="644px" height="495px">
+            </div>
+        </section>
+        <section class="secndsect">
+            <div class="titlediv">
+                <h2>We design tools to unveil <br>your superpowers</h2>
+            </div>
+            <div class="bcgdiv">
+                <div class="cards_container">
+                    <div class="firstcard">
+                        <div class="firsicondiv">
+                            <img src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/cursor.png" alt="cursor" width="12px" height="18px">
+                        </div>
+                        <h4>First click tests</h4>
+                        <p>While most people enjoy casino gambling,</p>
+                    </div>
+                    <div class="seccard">
+                        <div class="secicondiv"> 
+                            <img src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/sur.png" alt="sur" width="18px" height="18px">
+                        </div>
+                        <h4>Design surveys</h4>
+                        <p>Sports betting, lottery and bingo playing for the fun</p>
+                    </div>
+                    <div class="thirdcard">
+                        <div class="thiricondiv">
+                            <img src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/heart.png" alt="heart" width="16px" height="18px">
+                        </div>
+                        <h4>Preference tests</h4>
+                        <p>The Myspace page defines the individual.</p>
+                    </div>
+                    <div class="quartercard"> 
+                        <div class="quartericondiv">
+                            <img src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/sndcl.png" alt="sndcl" width="14px" height="18px">
+                        </div>
+                        <h4>Five second tests</h4>
+                        <p>Personal choices and the overall personality of the person.</p>
+                    </div>
+                </div>
+                <div class="centrbtn">
+                    <a href="#"><button class="get_buttn">Sign up Now</button></a>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer>
+        <div class="footlogo">
+            <a href="#"><img class="logo" src="https://raw.githubusercontent.com/MarkMark1231/HW-Box-Model/main/img/Logo.png" alt="logo" width="200px" height="32px"></a>
+        </div>
+        <div class="footcontainer">
+            <h4>Quick Links</h4>
+            <a href="" class="link">About Us</a>
+            <a href="" class="link">Blog</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">FAQ</a>
+        </div>
+        <div class="footcontainer">
+            <h4>Legal Stuff</h4>
+            <a href="" class="link">Disclaimer</a>
+            <a href="" class="link">Financing</a>
+            <a href="" class="link">Privacy Policy</a>
+            <a href="" class="link">Terms of Service</a>
+        </div>
+        <div class="footcontainer">
+            <h4>Knowing you're always on <br> the best energy deal.</h4>
+            <form action="" method="get" class="form">
+                <div class="foot_form">
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" placeholder="Enter your phone Number" required>
+                    <button type="submit" class="get_buttn">Sign Up Now</button>
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
